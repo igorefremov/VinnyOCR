@@ -17,6 +17,6 @@ Pod::Spec.new do |spec|
   spec.source_files             = "VinnyOCR/VinnyOCR/*.swift", "VinnyOCR/VinnyOCR/Extensions/*.swift", "VinnyOCR/VinnyOCR/FFNN/*.swift"
 
   spec.description              = <<-DESC
-    VinnyOCR is a fast and small OCR library written in Swift. Powered by the Accelerate and Vision frameworks, it uses a neural network to recognize text. VinnyOCR was created and optimized to recognize short, one line long alphanumeric codes (e.g. DI49CM). Only iOS and macOS are supported at the moment.
+    VinnyOCR is a fast and small OCR library written in Swift. Powered by the Accelerate and Vision frameworks, it uses a neural network to recognize text. VinnyOCR was created and optimized to recognize short, one line long, alphanumeric codes (e.g. DI49CM). Only iOS and macOS are supported at the moment.
                                   DESC
 end
