@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78070A7421E8CE1D008380A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78070A7321E8CE1D008380A7 /* AppDelegate.swift */; };
+		78070A7621E8CE1D008380A7 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78070A7521E8CE1D008380A7 /* TrainingViewController.swift */; };
+		78070A7821E8CE1E008380A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78070A7721E8CE1E008380A7 /* Assets.xcassets */; };
+		78070A7B21E8CE1E008380A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78070A7921E8CE1E008380A7 /* Main.storyboard */; };
+		78070A8821E8D38B008380A7 /* ShouldTrainTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78070A8721E8D38B008380A7 /* ShouldTrainTableCellView.swift */; };
+		78070A8D21E8EEF1008380A7 /* TrainingGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78070A8C21E8EEF1008380A7 /* TrainingGenerator.swift */; };
+		78070A9021E8EF67008380A7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78070A8F21E8EF67008380A7 /* Extensions.swift */; };
+		7819C65921EE244A003C8C6E /* MainApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819C65821EE244A003C8C6E /* MainApplication.swift */; };
+		7842F09B21E948C2008589D2 /* VinnyOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7842F09621E947DD008589D2 /* VinnyOCR.framework */; };
+		786EE8952204AC2300B689F3 /* TrainingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EE8942204AC2300B689F3 /* TrainingWorker.swift */; };
+		786FC628232034C6004AFB11 /* TrainingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC627232034C6004AFB11 /* TrainingParameters.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7842F09521E947DD008589D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7842F09021E947DD008589D2 /* VinnyOCR.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7842F06C21E946D7008589D2;
+			remoteInfo = VinnyOCR;
+		};
+		789EADEC21ECF16700AB8CC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7842F09021E947DD008589D2 /* VinnyOCR.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 781C0FF821ECC2A600AC56F0;
+			remoteInfo = "VinnyOCR iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7833512021E9320400866F3A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		78070A7021E8CE1D008380A7 /* VinnyOCR Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VinnyOCR Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78070A7321E8CE1D008380A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78070A7521E8CE1D008380A7 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		78070A7721E8CE1E008380A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78070A7A21E8CE1E008380A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78070A7C21E8CE1E008380A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78070A7D21E8CE1E008380A7 /* VinnyOCR_Trainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VinnyOCR_Trainer.entitlements; sourceTree = "<group>"; };
+		78070A8721E8D38B008380A7 /* ShouldTrainTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouldTrainTableCellView.swift; sourceTree = "<group>"; };
+		78070A8C21E8EEF1008380A7 /* TrainingGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingGenerator.swift; sourceTree = "<group>"; };
+		78070A8F21E8EF67008380A7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7819C65821EE244A003C8C6E /* MainApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApplication.swift; sourceTree = "<group>"; };
+		7842F09021E947DD008589D2 /* VinnyOCR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VinnyOCR.xcodeproj; path = ../../VinnyOCR/VinnyOCR.xcodeproj; sourceTree = "<group>"; };
+		786EE8942204AC2300B689F3 /* TrainingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingWorker.swift; sourceTree = "<group>"; };
+		786FC627232034C6004AFB11 /* TrainingParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingParameters.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78070A6D21E8CE1D008380A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7842F09B21E948C2008589D2 /* VinnyOCR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78070A6721E8CE1D008380A7 = {
+			isa = PBXGroup;
+			children = (
+				78070A7221E8CE1D008380A7 /* VinnyOCR Trainer */,
+				78070A7121E8CE1D008380A7 /* Products */,
+				7833511E21E931F900866F3A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78070A7121E8CE1D008380A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78070A7021E8CE1D008380A7 /* VinnyOCR Trainer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78070A7221E8CE1D008380A7 /* VinnyOCR Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				7842F09021E947DD008589D2 /* VinnyOCR.xcodeproj */,
+				78070A7721E8CE1E008380A7 /* Assets.xcassets */,
+				78070A8E21E8EF5A008380A7 /* Extensions */,
+				78070A8A21E8EE0B008380A7 /* Sections */,
+				786EE8912204ABC100B689F3 /* Training */,
+				78070A7321E8CE1D008380A7 /* AppDelegate.swift */,
+				7819C65821EE244A003C8C6E /* MainApplication.swift */,
+				78070A7921E8CE1E008380A7 /* Main.storyboard */,
+				78070A7C21E8CE1E008380A7 /* Info.plist */,
+				78070A7D21E8CE1E008380A7 /* VinnyOCR_Trainer.entitlements */,
+			);
+			path = "VinnyOCR Trainer";
+			sourceTree = "<group>";
+		};
+		78070A8A21E8EE0B008380A7 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				78070A8721E8D38B008380A7 /* ShouldTrainTableCellView.swift */,
+				78070A7521E8CE1D008380A7 /* TrainingViewController.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		78070A8E21E8EF5A008380A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78070A8F21E8EF67008380A7 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7833511E21E931F900866F3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7842F09121E947DD008589D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7842F09621E947DD008589D2 /* VinnyOCR.framework */,
+				789EADED21ECF16700AB8CC7 /* VinnyOCR.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		786EE8912204ABC100B689F3 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				78070A8C21E8EEF1008380A7 /* TrainingGenerator.swift */,
+				786FC627232034C6004AFB11 /* TrainingParameters.swift */,
+				786EE8942204AC2300B689F3 /* TrainingWorker.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78070A6F21E8CE1D008380A7 /* VinnyOCR Trainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78070A8021E8CE1E008380A7 /* Build configuration list for PBXNativeTarget "VinnyOCR Trainer" */;
+			buildPhases = (
+				78070A6C21E8CE1D008380A7 /* Sources */,
+				78070A6D21E8CE1D008380A7 /* Frameworks */,
+				78070A6E21E8CE1D008380A7 /* Resources */,
+				7833512021E9320400866F3A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VinnyOCR Trainer";
+			productName = "VIN Scan Trainer";
+			productReference = 78070A7021E8CE1D008380A7 /* VinnyOCR Trainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78070A6821E8CE1D008380A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Igor Efremov";
+				TargetAttributes = {
+					78070A6F21E8CE1D008380A7 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = 78070A6B21E8CE1D008380A7 /* Build configuration list for PBXProject "VinnyOCR Trainer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78070A6721E8CE1D008380A7;
+			productRefGroup = 78070A7121E8CE1D008380A7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7842F09121E947DD008589D2 /* Products */;
+					ProjectRef = 7842F09021E947DD008589D2 /* VinnyOCR.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				78070A6F21E8CE1D008380A7 /* VinnyOCR Trainer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7842F09621E947DD008589D2 /* VinnyOCR.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VinnyOCR.framework;
+			remoteRef = 7842F09521E947DD008589D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		789EADED21ECF16700AB8CC7 /* VinnyOCR.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VinnyOCR.framework;
+			remoteRef = 789EADEC21ECF16700AB8CC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78070A6E21E8CE1D008380A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78070A7821E8CE1E008380A7 /* Assets.xcassets in Resources */,
+				78070A7B21E8CE1E008380A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78070A6C21E8CE1D008380A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786EE8952204AC2300B689F3 /* TrainingWorker.swift in Sources */,
+				7819C65921EE244A003C8C6E /* MainApplication.swift in Sources */,
+				78070A9021E8EF67008380A7 /* Extensions.swift in Sources */,
+				786FC628232034C6004AFB11 /* TrainingParameters.swift in Sources */,
+				78070A7621E8CE1D008380A7 /* TrainingViewController.swift in Sources */,
+				78070A8D21E8EEF1008380A7 /* TrainingGenerator.swift in Sources */,
+				78070A8821E8D38B008380A7 /* ShouldTrainTableCellView.swift in Sources */,
+				78070A7421E8CE1D008380A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78070A7921E8CE1E008380A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78070A7A21E8CE1E008380A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78070A7E21E8CE1E008380A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78070A7F21E8CE1E008380A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		78070A8121E8CE1E008380A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "VinnyOCR Trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "us.cpgroup.VinnyOCR-Trainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		78070A8221E8CE1E008380A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "VinnyOCR Trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "us.cpgroup.VinnyOCR-Trainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78070A6B21E8CE1D008380A7 /* Build configuration list for PBXProject "VinnyOCR Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78070A7E21E8CE1E008380A7 /* Debug */,
+				78070A7F21E8CE1E008380A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78070A8021E8CE1E008380A7 /* Build configuration list for PBXNativeTarget "VinnyOCR Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78070A8121E8CE1E008380A7 /* Debug */,
+				78070A8221E8CE1E008380A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78070A6821E8CE1D008380A7 /* Project object */;
+}

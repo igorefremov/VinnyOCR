@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		781C0FF221ECC1CA00AC56F0 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C0FF121ECC1CA00AC56F0 /* CrossPlatform.swift */; };
+		781C100021ECC2B500AC56F0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842F07821E9471A008589D2 /* Image.swift */; };
+		781C100121ECC2B500AC56F0 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C0FF121ECC1CA00AC56F0 /* CrossPlatform.swift */; };
+		781C100421ECC2C100AC56F0 /* VinnyOCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 7842F06F21E946D7008589D2 /* VinnyOCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		781C101521ECC5B700AC56F0 /* VinnyOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C101421ECC5B700AC56F0 /* VinnyOCR.swift */; };
+		781C101621ECC5B700AC56F0 /* VinnyOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C101421ECC5B700AC56F0 /* VinnyOCR.swift */; };
+		781E544921ECE4C600823077 /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781E544821ECE4C600823077 /* NSArray.swift */; };
+		781E544B21ECE4E100823077 /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781E544821ECE4C600823077 /* NSArray.swift */; };
+		7842F07121E946D7008589D2 /* VinnyOCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 7842F06F21E946D7008589D2 /* VinnyOCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7842F07921E9471A008589D2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842F07821E9471A008589D2 /* Image.swift */; };
+		7862B79E2317393C00865FDD /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A86D062204E455001680C8 /* Vision.framework */; };
+		786FC6242320332F004AFB11 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 786FC6232320332F004AFB11 /* Accelerate.framework */; };
+		786FC62623203335004AFB11 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 786FC62523203335004AFB11 /* Vision.framework */; };
+		78A86D052204E440001680C8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A86D042204E440001680C8 /* Accelerate.framework */; };
+		78CB5F3E22170FE100D1D927 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3622170FE100D1D927 /* Random.swift */; };
+		78CB5F4122170FE100D1D927 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3922170FE100D1D927 /* Vector.swift */; };
+		78CB5F4222170FE100D1D927 /* FFNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3A22170FE100D1D927 /* FFNN.swift */; };
+		78CB5F4322170FE100D1D927 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3B22170FE100D1D927 /* Operations.swift */; };
+		78CB5F4422170FE100D1D927 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3C22170FE100D1D927 /* Matrix.swift */; };
+		78CB5F47221711EE00D1D927 /* FFNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3A22170FE100D1D927 /* FFNN.swift */; };
+		78CB5F49221711EE00D1D927 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3C22170FE100D1D927 /* Matrix.swift */; };
+		78CB5F4A221711EE00D1D927 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3B22170FE100D1D927 /* Operations.swift */; };
+		78CB5F4B221711EE00D1D927 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3622170FE100D1D927 /* Random.swift */; };
+		78CB5F4D221711EE00D1D927 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5F3922170FE100D1D927 /* Vector.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		781C0FF121ECC1CA00AC56F0 /* CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
+		781C0FF821ECC2A600AC56F0 /* VinnyOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinnyOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		781C101421ECC5B700AC56F0 /* VinnyOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinnyOCR.swift; sourceTree = "<group>"; };
+		781E544821ECE4C600823077 /* NSArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArray.swift; sourceTree = "<group>"; };
+		7842F06C21E946D7008589D2 /* VinnyOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinnyOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7842F06F21E946D7008589D2 /* VinnyOCR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinnyOCR.h; sourceTree = "<group>"; };
+		7842F07021E946D7008589D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7842F07821E9471A008589D2 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		786FC6232320332F004AFB11 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		786FC62523203335004AFB11 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Vision.framework; sourceTree = DEVELOPER_DIR; };
+		78A86D042204E440001680C8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		78A86D062204E455001680C8 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		78CB5F3622170FE100D1D927 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		78CB5F3922170FE100D1D927 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		78CB5F3A22170FE100D1D927 /* FFNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNN.swift; sourceTree = "<group>"; };
+		78CB5F3B22170FE100D1D927 /* Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		78CB5F3C22170FE100D1D927 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		781C0FF521ECC2A600AC56F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786FC6242320332F004AFB11 /* Accelerate.framework in Frameworks */,
+				786FC62623203335004AFB11 /* Vision.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7842F06921E946D7008589D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A86D052204E440001680C8 /* Accelerate.framework in Frameworks */,
+				7862B79E2317393C00865FDD /* Vision.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7842F06221E946D7008589D2 = {
+			isa = PBXGroup;
+			children = (
+				7842F06E21E946D7008589D2 /* VinnyOCR */,
+				7842F06D21E946D7008589D2 /* Products */,
+				7842F08B21E94742008589D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7842F06D21E946D7008589D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7842F06C21E946D7008589D2 /* VinnyOCR.framework */,
+				781C0FF821ECC2A600AC56F0 /* VinnyOCR.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7842F06E21E946D7008589D2 /* VinnyOCR */ = {
+			isa = PBXGroup;
+			children = (
+				7842F07721E9471A008589D2 /* Extensions */,
+				78CB5F3422170FE100D1D927 /* FFNN */,
+				781C0FF121ECC1CA00AC56F0 /* CrossPlatform.swift */,
+				781C101421ECC5B700AC56F0 /* VinnyOCR.swift */,
+				7842F06F21E946D7008589D2 /* VinnyOCR.h */,
+				7842F07021E946D7008589D2 /* Info.plist */,
+			);
+			path = VinnyOCR;
+			sourceTree = "<group>";
+		};
+		7842F07721E9471A008589D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7842F07821E9471A008589D2 /* Image.swift */,
+				781E544821ECE4C600823077 /* NSArray.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7842F08B21E94742008589D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				786FC62523203335004AFB11 /* Vision.framework */,
+				78A86D042204E440001680C8 /* Accelerate.framework */,
+				786FC6232320332F004AFB11 /* Accelerate.framework */,
+				78A86D062204E455001680C8 /* Vision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78CB5F3422170FE100D1D927 /* FFNN */ = {
+			isa = PBXGroup;
+			children = (
+				78CB5F3A22170FE100D1D927 /* FFNN.swift */,
+				78CB5F3C22170FE100D1D927 /* Matrix.swift */,
+				78CB5F3B22170FE100D1D927 /* Operations.swift */,
+				78CB5F3622170FE100D1D927 /* Random.swift */,
+				78CB5F3922170FE100D1D927 /* Vector.swift */,
+			);
+			path = FFNN;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		781C0FF321ECC2A600AC56F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781C100421ECC2C100AC56F0 /* VinnyOCR.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7842F06721E946D7008589D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7842F07121E946D7008589D2 /* VinnyOCR.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		781C0FF721ECC2A600AC56F0 /* VinnyOCR iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781C0FFD21ECC2A600AC56F0 /* Build configuration list for PBXNativeTarget "VinnyOCR iOS" */;
+			buildPhases = (
+				781C0FF321ECC2A600AC56F0 /* Headers */,
+				781C0FF421ECC2A600AC56F0 /* Sources */,
+				781C0FF521ECC2A600AC56F0 /* Frameworks */,
+				781C0FF621ECC2A600AC56F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VinnyOCR iOS";
+			productName = "VinnyOCR iOS";
+			productReference = 781C0FF821ECC2A600AC56F0 /* VinnyOCR.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7842F06B21E946D7008589D2 /* VinnyOCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7842F07421E946D7008589D2 /* Build configuration list for PBXNativeTarget "VinnyOCR" */;
+			buildPhases = (
+				7842F06721E946D7008589D2 /* Headers */,
+				7842F06821E946D7008589D2 /* Sources */,
+				7842F06921E946D7008589D2 /* Frameworks */,
+				7842F06A21E946D7008589D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VinnyOCR;
+			productName = VinnyOCR;
+			productReference = 7842F06C21E946D7008589D2 /* VinnyOCR.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7842F06321E946D7008589D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Igor Efremov";
+				TargetAttributes = {
+					781C0FF721ECC2A600AC56F0 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
+					};
+					7842F06B21E946D7008589D2 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = 7842F06621E946D7008589D2 /* Build configuration list for PBXProject "VinnyOCR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7842F06221E946D7008589D2;
+			productRefGroup = 7842F06D21E946D7008589D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7842F06B21E946D7008589D2 /* VinnyOCR */,
+				781C0FF721ECC2A600AC56F0 /* VinnyOCR iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		781C0FF621ECC2A600AC56F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7842F06A21E946D7008589D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		781C0FF421ECC2A600AC56F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78CB5F4A221711EE00D1D927 /* Operations.swift in Sources */,
+				78CB5F4B221711EE00D1D927 /* Random.swift in Sources */,
+				781E544B21ECE4E100823077 /* NSArray.swift in Sources */,
+				781C101621ECC5B700AC56F0 /* VinnyOCR.swift in Sources */,
+				78CB5F49221711EE00D1D927 /* Matrix.swift in Sources */,
+				78CB5F47221711EE00D1D927 /* FFNN.swift in Sources */,
+				781C100021ECC2B500AC56F0 /* Image.swift in Sources */,
+				78CB5F4D221711EE00D1D927 /* Vector.swift in Sources */,
+				781C100121ECC2B500AC56F0 /* CrossPlatform.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7842F06821E946D7008589D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781E544921ECE4C600823077 /* NSArray.swift in Sources */,
+				781C101521ECC5B700AC56F0 /* VinnyOCR.swift in Sources */,
+				78CB5F4322170FE100D1D927 /* Operations.swift in Sources */,
+				7842F07921E9471A008589D2 /* Image.swift in Sources */,
+				781C0FF221ECC1CA00AC56F0 /* CrossPlatform.swift in Sources */,
+				78CB5F4222170FE100D1D927 /* FFNN.swift in Sources */,
+				78CB5F4422170FE100D1D927 /* Matrix.swift in Sources */,
+				78CB5F4122170FE100D1D927 /* Vector.swift in Sources */,
+				78CB5F3E22170FE100D1D927 /* Random.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		781C0FFE21ECC2A600AC56F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = VinnyOCR/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "us.cpgroup.VinnyOCR-iOS";
+				PRODUCT_NAME = VinnyOCR;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+			};
+			name = Debug;
+		};
+		781C0FFF21ECC2A600AC56F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = VinnyOCR/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "us.cpgroup.VinnyOCR-iOS";
+				PRODUCT_NAME = VinnyOCR;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+			};
+			name = Release;
+		};
+		7842F07221E946D7008589D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7842F07321E946D7008589D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7842F07521E946D7008589D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = VinnyOCR/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = us.cpgroup.VinnyOCR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7842F07621E946D7008589D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = VinnyOCR/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = us.cpgroup.VinnyOCR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		781C0FFD21ECC2A600AC56F0 /* Build configuration list for PBXNativeTarget "VinnyOCR iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781C0FFE21ECC2A600AC56F0 /* Debug */,
+				781C0FFF21ECC2A600AC56F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7842F06621E946D7008589D2 /* Build configuration list for PBXProject "VinnyOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7842F07221E946D7008589D2 /* Debug */,
+				7842F07321E946D7008589D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7842F07421E946D7008589D2 /* Build configuration list for PBXNativeTarget "VinnyOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7842F07521E946D7008589D2 /* Debug */,
+				7842F07621E946D7008589D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7842F06321E946D7008589D2 /* Project object */;
+}
