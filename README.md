@@ -32,7 +32,7 @@ Apple frameworks (`Accelerate` and `Vision`) for image manipulation and text loc
 
 To integrate VinnyOCR into your Xcode project using CocoaPods, add it to your `Podfile`:
 
-`pod 'VinnyOCR', '~> 1.0.0'`
+`pod 'VinnyOCR'`
 
 ## How it Works
 
@@ -88,6 +88,8 @@ After starting the training app, do the following:
 - [ ] Add training screenshots to README
 
 - [ ] Distort generated training images during training
+
+- [ ] Allow dynamic character set during training
 
 ## Acknowledgements
 
