@@ -17,6 +17,16 @@ import Vision
 private typealias ProcessingBuffer = (buffer: vImage_Buffer, format: vImage_CGImageFormat)
 
 private extension vImage_Buffer {
+    func releaseResources() {
+        if #available(macOS 10.15, iOS 13.0, *) {
+            self.free()
+        } else {
+            Darwin.free(self.data)
+        }
+    }
+}
+
+private extension vImage_Buffer {
     var dataBuffer: [UInt8] {
         let pointer = self.data!.assumingMemoryBound(to: UInt8.self)
         let bufferPointer = UnsafeBufferPointer(start: pointer, count: Int(self.width * self.height))
@@ -37,7 +47,7 @@ private extension vImage_Buffer {
         
         let converter = vImageConverter_CreateWithCGImageFormat(&sourceFormat, &format, nil, vImage_Flags(kvImageNoFlags), nil)!.takeRetainedValue()
         vImageConvert_AnyToAny(converter, &sourceBuffer, &buffer, nil, vImage_Flags(kvImageNoFlags))
-        free(sourceBuffer.data)
+        sourceBuffer.releaseResources()
         
         return (buffer, format)
     }
@@ -63,7 +73,7 @@ private extension vImage_Buffer {
         
         vImageBuffer_Init(&buffer, sourceBuffer.height, sourceBuffer.width, format.bitsPerPixel, vImage_Flags(kvImageNoFlags))
         vImageMatrixMultiply_ARGB8888ToPlanar8(&sourceBuffer, &buffer, &coefficientsMatrix, divisor, &preBias, postBias, vImage_Flags(kvImageNoFlags))
-        free(sourceBuffer.data)
+        sourceBuffer.releaseResources()
         
         var oneBitBuffer = vImage_Buffer()
         let oneBitFormat = vImage_CGImageFormat(bitsPerComponent: 1,
@@ -74,7 +84,7 @@ private extension vImage_Buffer {
         
         vImageBuffer_Init(&oneBitBuffer, buffer.height, buffer.width, 1, vImage_Flags(kvImageNoFlags))
         vImageConvert_Planar8toPlanar1(&buffer, &oneBitBuffer, nil, Int32(kvImageConvert_DitherNone), vImage_Flags(kvImageNoFlags))
-        free(buffer.data)
+        buffer.releaseResources()
         
         return (oneBitBuffer, oneBitFormat)
     }
@@ -87,7 +97,7 @@ private extension vImage_Buffer {
         var buffer = vImage_Buffer()
         vImageBuffer_Init(&buffer, height, width, sourceFormat.bitsPerPixel, vImage_Flags(kvImageNoFlags))
         vImageScale_Planar8(&sourceBuffer, &buffer, nil, vImage_Flags(kvImageNoFlags))
-        free(sourceBuffer.data)
+        sourceBuffer.releaseResources()
         
         return (buffer, sourceFormat)
     }
@@ -117,7 +127,7 @@ private extension OCRImage {
     convenience init(buffer: inout vImage_Buffer, format: inout vImage_CGImageFormat) {
         let result = vImageCreateCGImageFromBuffer(&buffer, &format, nil, nil, vImage_Flags(kvImageNoFlags), nil)!
         let cgImage = result.takeRetainedValue()
-        free(buffer.data)
+        buffer.releaseResources()
         
         #if os(iOS)
         self.init(cgImage: cgImage)
@@ -207,7 +217,7 @@ public extension OCRImage {
                     dataBuffer.append(aspectRatio)
                     
                     result.append((dataBuffer, location))
-                    free(data.buffer.data)
+                    data.buffer.releaseResources()
                 }
             }
             

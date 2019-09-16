@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                     = "VinnyOCR"
-  spec.version                  = "1.0.0"
+  spec.version                  = "1.0.1"
   spec.summary                  = "OCR library written in Swift powered by the Accelerate and Vision frameworks."
 
   spec.homepage                 = "https://github.com/igorefremov/VinnyOCR"
