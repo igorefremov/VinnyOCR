@@ -77,7 +77,7 @@ class TrainingWorker {
         return (inputs, tests)
     }
     
-    private func makeTrainingData() -> (blobs: [[Float]], answers: [[Float]]) {
+    private func makeTrainingData() -> NetworkInputs {
         let lock = NSLock()
         
         var data = [[Float]]()
