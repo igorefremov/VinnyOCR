@@ -24,10 +24,10 @@ class TrainingWorker {
     var progress: ((Float) -> Void)?
     var finished: ((FFNN) -> Void)?
     
-    init(fonts: [String], backgrounds: [NSImage], charset: String, expectedTextLength: Int) {
+    init(fonts: [String], backgrounds: [NSImage], charset: String, maxTextLength: Int) {
         self.generator = TrainingGenerator(fonts: fonts, backgrounds: backgrounds)
         self.charset = charset
-        self.length = expectedTextLength
+        self.length = maxTextLength
         
         // 321 inputs are used because the images are scaled to 16x20, stuffed into an array, and then the aspect ratio of the non-scaled image
         // is appended to the end of the array. (16 * 20) + 1 = 321
@@ -85,7 +85,9 @@ class TrainingWorker {
         
         var madeData = false
         repeat {
-            let trainingData = self.generator.generateImage(withTextLength: self.length, withCharset: self.charset)
+            let length = 3 + Int(arc4random_uniform(UInt32(self.length) - 3))
+            
+            let trainingData = self.generator.generateImage(withTextLength: length, withCharset: self.charset)
             let generatedImage = trainingData.image.preprocess()
             let generatedText = trainingData.text
             
@@ -117,10 +119,20 @@ class TrainingWorker {
     
     private func trainNetwork() {
         let inputs = self.makeNetworkInputs(inputCount: TrainingParameters.InputCount, testCount: TrainingParameters.TestCount)
+        var callbackCount = 0
+        var minimumError = MAXFLOAT
+        var lastError = Float.nan
         
         do {
             _ = try self.ffnn.train(inputs: inputs.inputs.blobs, answers: inputs.inputs.answers, testInputs: inputs.tests.blobs, testAnswers: inputs.tests.answers, errorThreshold: TrainingParameters.ErrorThreshold) { (error) -> Bool in
                 self.progress?(error)
+                lastError = error
+                callbackCount += 1
+                
+                minimumError = min(minimumError, error)
+                if callbackCount > TrainingParameters.MaximumTrainCallbackCount, minimumError + TrainingParameters.ErrorThreshold < error {
+                    return false
+                }
                 return self.running && (!self.stop)
             }
         } catch {
@@ -128,7 +140,7 @@ class TrainingWorker {
         }
         
         if !self.stop {
-            self.progress?(TrainingParameters.ErrorThreshold)
+            self.progress?(lastError)
         }
         self.finish()
     }

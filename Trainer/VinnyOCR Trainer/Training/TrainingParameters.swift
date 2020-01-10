@@ -8,14 +8,15 @@
 import Foundation
 
 struct TrainingParameters {
-    static let ExpectedTextLength           = 17
+    static let MaxTrainingTextLength        = 17
     
-    static let HiddenNodeCount              = 100
-    static let LearningRate: Float          = 0.35
-    static let Momentum: Float              = 0.7
+    static let HiddenNodeCount              = 200
+    static let LearningRate: Float          = 0.2
+    static let Momentum: Float              = 0.35
     
-    static let InputCount                   = 200
-    static let TestCount                    = 40
+    static let InputCount                   = 500
+    static let TestCount                    = 100
     
-    static let ErrorThreshold: Float        = 0.5
+    static let ErrorThreshold: Float        = 2.0
+    static let MaximumTrainCallbackCount    = 320
 }

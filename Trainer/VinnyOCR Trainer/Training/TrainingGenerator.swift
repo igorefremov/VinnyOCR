@@ -43,7 +43,7 @@ class TrainingGenerator {
     }
     
     func generateImage(withTextLength textLength: Int, withCharset charset: String) -> (image: NSImage, text: String) {
-        let text = String.random(ofLength: 17, fromCharset: charset)
+        let text = String.random(ofLength: textLength, fromCharset: charset)
         let background = self.randomBackground
         
         let fontAttributes = self.randomFontAttributes
