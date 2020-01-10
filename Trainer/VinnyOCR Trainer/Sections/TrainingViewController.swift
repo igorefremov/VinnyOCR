@@ -19,7 +19,7 @@ class TrainingViewController: NSViewController {
     @IBOutlet var trainingDirectoryButton: NSButton!
     @IBOutlet var makeTrainingDataButton: NSButton!
     
-    @IBOutlet var progressLabel: NSTextField!
+    @IBOutlet var accuracyLabel: NSTextField!
     
     private let fonts = NSFontManager.shared.availableFonts.filter({ !$0.hasPrefix(".") }).filter({ NSFont(name: $0, size: 0)?.displayName != nil })
     
@@ -36,7 +36,7 @@ class TrainingViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.progressLabel.stringValue = ""
+        self.accuracyLabel.stringValue = ""
     }
     
     @IBAction func makeTrainingDataButtonPressed(_ sender: NSButton) {
@@ -102,7 +102,7 @@ extension TrainingViewController {
             return
         }
         
-        self.progressLabel.stringValue = ""
+        self.accuracyLabel.stringValue = ""
         
         let fonts = self.selectedFonts, backgrounds = self.selectedBackgrounds
         
@@ -111,13 +111,13 @@ extension TrainingViewController {
         
         self.worker = TrainingWorker(fonts: fonts, backgrounds: backgrounds, charset: charset, maxTextLength: TrainingParameters.MaxTrainingTextLength)
         
-        self.worker!.progress = { [weak self] (error) in
+        self.worker!.progress = { [weak self] (accuracy) in
             guard let strongSelf = self else {
                 return
             }
             
             DispatchQueue.main.async {
-                strongSelf.progressLabel.stringValue = String(format: "%.8f", error)
+                strongSelf.accuracyLabel.stringValue = String(format: "%.04f%%", accuracy * 100)
             }
         }
         

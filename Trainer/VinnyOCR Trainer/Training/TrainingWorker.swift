@@ -119,29 +119,22 @@ class TrainingWorker {
     
     private func trainNetwork() {
         let inputs = self.makeNetworkInputs(inputCount: TrainingParameters.InputCount, testCount: TrainingParameters.TestCount)
-        var callbackCount = 0
-        var minimumError = MAXFLOAT
-        var lastError = Float.nan
+        
+        var accuracyTests = NetworkInputs([[Float]](), [[Float]]())
+        for _ in (0..<50) {
+            let data = self.makeTrainingData()
+            accuracyTests.blobs.append(contentsOf: data.blobs)
+            accuracyTests.answers.append(contentsOf: data.answers)
+        }
         
         do {
-            _ = try self.ffnn.train(inputs: inputs.inputs.blobs, answers: inputs.inputs.answers, testInputs: inputs.tests.blobs, testAnswers: inputs.tests.answers, errorThreshold: TrainingParameters.ErrorThreshold) { (error) -> Bool in
-                self.progress?(error)
-                lastError = error
-                callbackCount += 1
-                
-                minimumError = min(minimumError, error)
-                if callbackCount > TrainingParameters.MaximumTrainCallbackCount, minimumError + TrainingParameters.ErrorThreshold < error {
-                    return false
-                }
-                return self.running && (!self.stop)
-            }
+            _ = try self.ffnn.train(inputs: inputs.inputs.blobs, answers: inputs.inputs.answers, testInputs: inputs.tests.blobs, testAnswers: inputs.tests.answers, errorThreshold: 05, shouldContinue: { (error) -> (Bool, NetworkInputs?) in
+                return (self.running && (!self.stop), accuracyTests)
+            }, accuracy: self.progress)
         } catch {
             print("exception encountered while training: \(error)")
         }
         
-        if !self.stop {
-            self.progress?(lastError)
-        }
         self.finish()
     }
 }

@@ -106,17 +106,17 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="TrainingViewController" customModule="VinnyOCR_Trainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="666" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="666" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk1-Vg-IoN">
-                                <rect key="frame" x="20" y="107" width="626" height="404"/>
+                                <rect key="frame" x="20" y="109" width="626" height="371"/>
                                 <clipView key="contentView" id="E0Q-E4-err">
-                                    <rect key="frame" x="1" y="0.0" width="624" height="403"/>
+                                    <rect key="frame" x="1" y="0.0" width="624" height="370"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="uON-4W-hkL" viewBased="YES" id="DGp-wS-HQA">
-                                            <rect key="frame" x="0.0" y="0.0" width="624" height="378"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="624" height="345"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -124,7 +124,7 @@
                                             <tableColumns>
                                                 <tableColumn identifier="0" width="488" minWidth="40" maxWidth="1000" id="lY2-U0-GKd">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Font">
-                                                        <font key="font" metaFont="controlContent" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -162,7 +162,7 @@
                                                 </tableColumn>
                                                 <tableColumn identifier="1" width="130" minWidth="40" maxWidth="1000" id="k9Y-Ef-CVZ">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Should Train?">
-                                                        <font key="font" metaFont="controlContent" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -258,7 +258,7 @@
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s5W-bQ-s9m">
                                 <rect key="frame" x="470" y="3" width="182" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="DBk-6s-94N"/>
+                                    <constraint firstAttribute="width" constant="170" id="syB-rf-xiQ"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Start Training" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dEW-wh-36C">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -278,33 +278,33 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="s5W-bQ-s9m" firstAttribute="top" secondItem="TdG-qg-dkw" secondAttribute="bottom" constant="8" id="93O-fD-x34"/>
-                            <constraint firstItem="EsO-ta-bds" firstAttribute="leading" secondItem="BGN-7i-LCd" secondAttribute="leading" id="9BQ-b0-fba"/>
-                            <constraint firstItem="hk1-Vg-IoN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="AP5-es-kLs"/>
-                            <constraint firstItem="TdG-qg-dkw" firstAttribute="leading" secondItem="s5W-bQ-s9m" secondAttribute="leading" id="Avb-kl-zxi"/>
-                            <constraint firstItem="r5w-rN-rL9" firstAttribute="leading" secondItem="BGN-7i-LCd" secondAttribute="leading" id="DSR-4y-Gci"/>
-                            <constraint firstItem="TdG-qg-dkw" firstAttribute="trailing" secondItem="s5W-bQ-s9m" secondAttribute="trailing" id="Fl6-Yv-Aur"/>
-                            <constraint firstItem="mpi-er-qDk" firstAttribute="leading" secondItem="TdG-qg-dkw" secondAttribute="leading" id="Hzx-Lj-eEo"/>
-                            <constraint firstItem="r5w-rN-rL9" firstAttribute="trailing" secondItem="BGN-7i-LCd" secondAttribute="trailing" id="RFG-Cf-jAk"/>
-                            <constraint firstItem="hk1-Vg-IoN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Twh-Ur-BYd"/>
-                            <constraint firstItem="EsO-ta-bds" firstAttribute="top" secondItem="hk1-Vg-IoN" secondAttribute="bottom" constant="20" id="VJG-Qf-NgW"/>
-                            <constraint firstItem="TdG-qg-dkw" firstAttribute="top" secondItem="mpi-er-qDk" secondAttribute="bottom" constant="8" id="cIC-Yo-BAR"/>
-                            <constraint firstItem="r5w-rN-rL9" firstAttribute="centerY" secondItem="s5W-bQ-s9m" secondAttribute="centerY" id="dYw-ye-he0"/>
-                            <constraint firstAttribute="trailing" secondItem="s5W-bQ-s9m" secondAttribute="trailing" constant="20" id="f6a-J7-NP0"/>
-                            <constraint firstAttribute="bottom" secondItem="s5W-bQ-s9m" secondAttribute="bottom" constant="10" id="hUZ-0n-lkf"/>
-                            <constraint firstItem="BGN-7i-LCd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="hyv-nr-78h"/>
-                            <constraint firstItem="BGN-7i-LCd" firstAttribute="centerY" secondItem="TdG-qg-dkw" secondAttribute="centerY" id="j5a-kj-Fz0"/>
-                            <constraint firstItem="TdG-qg-dkw" firstAttribute="leading" secondItem="BGN-7i-LCd" secondAttribute="trailing" constant="8" id="jlp-jB-cjE"/>
-                            <constraint firstItem="EsO-ta-bds" firstAttribute="centerY" secondItem="mpi-er-qDk" secondAttribute="centerY" id="ohD-TS-FCr"/>
-                            <constraint firstItem="EsO-ta-bds" firstAttribute="trailing" secondItem="BGN-7i-LCd" secondAttribute="trailing" id="ph7-aw-ukB"/>
-                            <constraint firstAttribute="trailing" secondItem="hk1-Vg-IoN" secondAttribute="trailing" constant="20" id="t6i-ml-bxB"/>
-                            <constraint firstItem="mpi-er-qDk" firstAttribute="trailing" secondItem="TdG-qg-dkw" secondAttribute="trailing" id="wOd-F0-Qq4"/>
+                            <constraint firstItem="BGN-7i-LCd" firstAttribute="centerY" secondItem="TdG-qg-dkw" secondAttribute="centerY" id="58j-kM-lOg"/>
+                            <constraint firstAttribute="trailing" secondItem="s5W-bQ-s9m" secondAttribute="trailing" constant="20" id="9qB-9A-gBC"/>
+                            <constraint firstAttribute="trailing" secondItem="hk1-Vg-IoN" secondAttribute="trailing" constant="20" id="Bsp-D9-8Ab"/>
+                            <constraint firstAttribute="bottom" secondItem="s5W-bQ-s9m" secondAttribute="bottom" constant="10" id="FhK-iW-7LW"/>
+                            <constraint firstItem="r5w-rN-rL9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Fxq-sA-2Pw"/>
+                            <constraint firstItem="TdG-qg-dkw" firstAttribute="leading" secondItem="s5W-bQ-s9m" secondAttribute="leading" id="I2m-9W-Pxc"/>
+                            <constraint firstItem="r5w-rN-rL9" firstAttribute="centerY" secondItem="s5W-bQ-s9m" secondAttribute="centerY" id="JTN-Yo-xGn"/>
+                            <constraint firstItem="TdG-qg-dkw" firstAttribute="trailing" secondItem="s5W-bQ-s9m" secondAttribute="trailing" id="JaT-fB-nZD"/>
+                            <constraint firstItem="mpi-er-qDk" firstAttribute="leading" secondItem="TdG-qg-dkw" secondAttribute="leading" id="Jnk-4r-b3U"/>
+                            <constraint firstItem="TdG-qg-dkw" firstAttribute="top" secondItem="mpi-er-qDk" secondAttribute="bottom" constant="8" id="KlZ-X0-zdh"/>
+                            <constraint firstItem="BGN-7i-LCd" firstAttribute="trailing" secondItem="r5w-rN-rL9" secondAttribute="trailing" id="Wwe-nC-2Jb"/>
+                            <constraint firstItem="mpi-er-qDk" firstAttribute="trailing" secondItem="TdG-qg-dkw" secondAttribute="trailing" id="XZc-hg-u1U"/>
+                            <constraint firstItem="BGN-7i-LCd" firstAttribute="leading" secondItem="r5w-rN-rL9" secondAttribute="leading" id="ahs-C9-SPv"/>
+                            <constraint firstItem="mpi-er-qDk" firstAttribute="top" secondItem="hk1-Vg-IoN" secondAttribute="bottom" constant="20" id="ak9-Tx-e2Z"/>
+                            <constraint firstItem="EsO-ta-bds" firstAttribute="centerY" secondItem="mpi-er-qDk" secondAttribute="centerY" id="kSl-uj-mkn"/>
+                            <constraint firstItem="EsO-ta-bds" firstAttribute="trailing" secondItem="BGN-7i-LCd" secondAttribute="trailing" id="nbV-dU-e6P"/>
+                            <constraint firstItem="s5W-bQ-s9m" firstAttribute="top" secondItem="TdG-qg-dkw" secondAttribute="bottom" constant="8" id="o0s-5X-VQ2"/>
+                            <constraint firstItem="hk1-Vg-IoN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="uT2-xf-MsJ"/>
+                            <constraint firstItem="s5W-bQ-s9m" firstAttribute="leading" secondItem="r5w-rN-rL9" secondAttribute="trailing" constant="8" id="vzK-ZG-Frw"/>
+                            <constraint firstItem="hk1-Vg-IoN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="xAV-6o-uBA"/>
+                            <constraint firstItem="EsO-ta-bds" firstAttribute="leading" secondItem="BGN-7i-LCd" secondAttribute="leading" id="xan-PI-t89"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accuracyLabel" destination="r5w-rN-rL9" id="r1o-id-LoG"/>
                         <outlet property="fontTableView" destination="DGp-wS-HQA" id="Kpm-nm-tam"/>
                         <outlet property="makeTrainingDataButton" destination="s5W-bQ-s9m" id="OOQ-73-9hb"/>
-                        <outlet property="progressLabel" destination="r5w-rN-rL9" id="y9o-Gc-zXG"/>
                         <outlet property="trainingBackgroundButton" destination="mpi-er-qDk" id="fTN-2y-hu0"/>
                         <outlet property="trainingBackgroundTextField" destination="EsO-ta-bds" id="rI7-GW-gFQ"/>
                         <outlet property="trainingDirectoryButton" destination="TdG-qg-dkw" id="mg8-hm-P0x"/>
@@ -313,7 +313,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="758.5"/>
+            <point key="canvasLocation" x="-91" y="792"/>
         </scene>
     </scenes>
 </document>
