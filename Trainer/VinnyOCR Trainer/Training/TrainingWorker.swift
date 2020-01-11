@@ -109,6 +109,7 @@ class TrainingWorker {
                 }
                 lock.unlock()
             })
+            generatedImage.recache()
             
             // Dirty little hack to make an async function (image.findCharacters) appear synchronous
             lock.cycle()
@@ -118,17 +119,16 @@ class TrainingWorker {
     }
     
     private func trainNetwork() {
-        let inputs = self.makeNetworkInputs(inputCount: TrainingParameters.InputCount, testCount: TrainingParameters.TestCount)
-        
         var accuracyTests = NetworkInputs([[Float]](), [[Float]]())
-        for _ in (0..<50) {
+        for _ in (0..<100) {
             let data = self.makeTrainingData()
             accuracyTests.blobs.append(contentsOf: data.blobs)
             accuracyTests.answers.append(contentsOf: data.answers)
         }
         
+        let inputs = self.makeNetworkInputs(inputCount: TrainingParameters.InputCount, testCount: TrainingParameters.TestCount)
         do {
-            _ = try self.ffnn.train(inputs: inputs.inputs.blobs, answers: inputs.inputs.answers, testInputs: inputs.tests.blobs, testAnswers: inputs.tests.answers, errorThreshold: 05, shouldContinue: { (error) -> (Bool, NetworkInputs?) in
+            _ = try self.ffnn.train(inputs: inputs.inputs.blobs, answers: inputs.inputs.answers, testInputs: inputs.tests.blobs, testAnswers: inputs.tests.answers, errorThreshold: 05, shouldContinue: { () -> (Bool, NetworkInputs?) in
                 return (self.running && (!self.stop), accuracyTests)
             }, accuracy: self.progress)
         } catch {

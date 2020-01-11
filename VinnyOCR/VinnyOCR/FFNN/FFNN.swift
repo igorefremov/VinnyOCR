@@ -371,7 +371,10 @@ public struct FFNN: Codable {
     ///     - errorThreshold: A `Float` indicating the maximum error allowed per epoch of validation data, before the network is considered 'trained'.
     ///             This value must be determined by the user, because it varies based on the type of data used and the desired accuracy.
     /// - Returns: The final calculated weights of the network after training has completed.
-    public mutating func train(inputs: [[Float]], answers: [[Float]], testInputs: [[Float]], testAnswers: [[Float]], errorThreshold: Float, shouldContinue: ((Float) -> (Bool, ([[Float]], [[Float]])?))?, accuracy: ((Float) -> Void)?) throws -> [Float] {
+    public mutating func train(inputs: [[Float]], answers: [[Float]], testInputs: [[Float]], testAnswers: [[Float]], errorThreshold: Float,
+                               shouldContinue: (() -> (Bool, ([[Float]], [[Float]])?))?,
+                               accuracy: ((Float) -> Void)?)
+        throws -> [Float] {
         guard errorThreshold > 0 else {
             throw FFNNError.invalidInputsError("error threshold must be greater than zero")
         }
@@ -388,7 +391,7 @@ public struct FFNN: Codable {
             // Calculate the total error of the validation set after each epoch
             let errorSum = try self.error(testInputs, expected: testAnswers)
 
-            let response = shouldContinue != nil ? shouldContinue!(errorSum) : (true, nil)
+            let response = shouldContinue != nil ? shouldContinue!() : (true, nil)
             let belowErrorThreshold = errorSum < errorThreshold
             
             guard !belowErrorThreshold, response.0 else {
