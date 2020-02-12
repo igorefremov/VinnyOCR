@@ -16,6 +16,8 @@ import Vision
 
 private typealias ProcessingBuffer = (buffer: vImage_Buffer, format: vImage_CGImageFormat)
 
+private let imageContext = CIContext()
+
 private extension vImage_Buffer {
     func releaseResources() {
         if #available(macOS 10.15, iOS 13.0, *) {
@@ -143,7 +145,6 @@ private extension OCRImage {
         let cgImage = NSBitmapImageRep(data: self.tiffRepresentation!)!.cgImage!
         #endif
         
-        let context = CIContext(options: nil)
         let filter = CIFilter(name: "CIColorControls")!
         let ciImage = CIImage(cgImage: cgImage)
         
@@ -152,7 +153,7 @@ private extension OCRImage {
         filter.setValue(1.45, forKey: kCIInputContrastKey)
         
         let outputCIImage = filter.outputImage!
-        let outputCGImage = context.createCGImage(outputCIImage, from: outputCIImage.extent)!
+        let outputCGImage = imageContext.createCGImage(outputCIImage, from: outputCIImage.extent)!
 
         #if os(iOS)
         return OCRImage(cgImage: outputCGImage)

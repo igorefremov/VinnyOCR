@@ -24,10 +24,10 @@ class TrainingWorker {
     var progress: ((Float) -> Void)?
     var finished: ((FFNN) -> Void)?
     
-    init(fonts: [String], backgrounds: [NSImage], charset: String, expectedTextLength: Int) {
+    init(fonts: [String], backgrounds: [NSImage], charset: String, maxTextLength: Int) {
         self.generator = TrainingGenerator(fonts: fonts, backgrounds: backgrounds)
         self.charset = charset
-        self.length = expectedTextLength
+        self.length = maxTextLength
         
         // 321 inputs are used because the images are scaled to 16x20, stuffed into an array, and then the aspect ratio of the non-scaled image
         // is appended to the end of the array. (16 * 20) + 1 = 321
@@ -77,7 +77,7 @@ class TrainingWorker {
         return (inputs, tests)
     }
     
-    private func makeTrainingData() -> (blobs: [[Float]], answers: [[Float]]) {
+    private func makeTrainingData() -> NetworkInputs {
         let lock = NSLock()
         
         var data = [[Float]]()
@@ -85,7 +85,9 @@ class TrainingWorker {
         
         var madeData = false
         repeat {
-            let trainingData = self.generator.generateImage(withTextLength: self.length, withCharset: self.charset)
+            let length = 3 + Int(arc4random_uniform(UInt32(self.length) - 3))
+            
+            let trainingData = self.generator.generateImage(withTextLength: length, withCharset: self.charset)
             let generatedImage = trainingData.image.preprocess()
             let generatedText = trainingData.text
             
@@ -107,6 +109,7 @@ class TrainingWorker {
                 }
                 lock.unlock()
             })
+            generatedImage.recache()
             
             // Dirty little hack to make an async function (image.findCharacters) appear synchronous
             lock.cycle()
@@ -116,20 +119,22 @@ class TrainingWorker {
     }
     
     private func trainNetwork() {
-        let inputs = self.makeNetworkInputs(inputCount: TrainingParameters.InputCount, testCount: TrainingParameters.TestCount)
+        var accuracyTests = NetworkInputs([[Float]](), [[Float]]())
+        for _ in (0..<100) {
+            let data = self.makeTrainingData()
+            accuracyTests.blobs.append(contentsOf: data.blobs)
+            accuracyTests.answers.append(contentsOf: data.answers)
+        }
         
+        let inputs = self.makeNetworkInputs(inputCount: TrainingParameters.InputCount, testCount: TrainingParameters.TestCount)
         do {
-            _ = try self.ffnn.train(inputs: inputs.inputs.blobs, answers: inputs.inputs.answers, testInputs: inputs.tests.blobs, testAnswers: inputs.tests.answers, errorThreshold: TrainingParameters.ErrorThreshold) { (error) -> Bool in
-                self.progress?(error)
-                return self.running && (!self.stop)
-            }
+            _ = try self.ffnn.train(inputs: inputs.inputs.blobs, answers: inputs.inputs.answers, testInputs: inputs.tests.blobs, testAnswers: inputs.tests.answers, errorThreshold: 05, shouldContinue: { () -> (Bool, NetworkInputs?) in
+                return (self.running && (!self.stop), accuracyTests)
+            }, accuracy: self.progress)
         } catch {
             print("exception encountered while training: \(error)")
         }
         
-        if !self.stop {
-            self.progress?(TrainingParameters.ErrorThreshold)
-        }
         self.finish()
     }
 }

@@ -371,7 +371,10 @@ public struct FFNN: Codable {
     ///     - errorThreshold: A `Float` indicating the maximum error allowed per epoch of validation data, before the network is considered 'trained'.
     ///             This value must be determined by the user, because it varies based on the type of data used and the desired accuracy.
     /// - Returns: The final calculated weights of the network after training has completed.
-    public mutating func train(inputs: [[Float]], answers: [[Float]], testInputs: [[Float]], testAnswers: [[Float]], errorThreshold: Float, shouldContinue: (Float) -> Bool = {_ in return true}) throws -> [Float] {
+    public mutating func train(inputs: [[Float]], answers: [[Float]], testInputs: [[Float]], testAnswers: [[Float]], errorThreshold: Float,
+                               shouldContinue: (() -> (Bool, ([[Float]], [[Float]])?))?,
+                               accuracy: ((Float) -> Void)?)
+        throws -> [Float] {
         guard errorThreshold > 0 else {
             throw FFNNError.invalidInputsError("error threshold must be greater than zero")
         }
@@ -384,12 +387,43 @@ public struct FFNN: Codable {
                 _ = try self.update(inputs: input)
                 _ = try self.backpropagate(answer: answers[index])
             }
+            
             // Calculate the total error of the validation set after each epoch
-            let errorSum: Float = try self.error(testInputs, expected: testAnswers)
-            if errorSum < errorThreshold || !shouldContinue(errorSum){
+            let errorSum = try self.error(testInputs, expected: testAnswers)
+
+            let response = shouldContinue != nil ? shouldContinue!() : (true, nil)
+            let belowErrorThreshold = errorSum < errorThreshold
+            
+            guard !belowErrorThreshold, response.0 else {
                 break
             }
+            
+            guard let tests = response.1 else {
+                continue
+            }
+            
+            var totalCorrect = 0
+            for index in (0..<tests.0.count) {
+                let input = tests.0[index]
+                let knownAnswer = tests.1[index]
+                
+                guard let calculatedAnswer = try? self.update(inputs: input) else {
+                    break
+                }
+                
+                let calculatedOffset = calculatedAnswer.enumerated().sorted(by: { $0.element > $1.element }).first!.offset
+                
+                // 0.5 is used as the comparison number because all wrong offsets contain 0.0, and the right offset
+                // contains 1.0... seems like a safe comparison point
+                if knownAnswer[calculatedOffset] > 0.5 {
+                    totalCorrect += 1
+                }
+            }
+            
+            let calculatedAccuracy = Float(totalCorrect) / Float(tests.1.count)
+            accuracy?(calculatedAccuracy)
         }
+        
         return self.hiddenWeights + self.outputWeights
     }
     

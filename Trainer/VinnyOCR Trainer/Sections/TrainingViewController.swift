@@ -19,10 +19,9 @@ class TrainingViewController: NSViewController {
     @IBOutlet var trainingDirectoryButton: NSButton!
     @IBOutlet var makeTrainingDataButton: NSButton!
     
-    @IBOutlet var progressLabel: NSTextField!
-    @IBOutlet var progressCircle: NSProgressIndicator!
+    @IBOutlet var accuracyLabel: NSTextField!
     
-    private let fonts = NSFontManager.shared.availableFonts.filter({ NSFont(name: $0, size: 0)?.displayName != nil })
+    private let fonts = NSFontManager.shared.availableFonts.filter({ !$0.hasPrefix(".") }).filter({ NSFont(name: $0, size: 0)?.displayName != nil })
     
     private var selectedFonts = [String]()
     private var selectedBackgrounds = [NSImage]()
@@ -37,8 +36,7 @@ class TrainingViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.progressCircle.doubleValue = 0.0
-        self.progressLabel.stringValue = ""
+        self.accuracyLabel.stringValue = ""
     }
     
     @IBAction func makeTrainingDataButtonPressed(_ sender: NSButton) {
@@ -104,37 +102,22 @@ extension TrainingViewController {
             return
         }
         
-        self.progressCircle.doubleValue = 0.0
-        self.progressLabel.stringValue = ""
+        self.accuracyLabel.stringValue = ""
         
         let fonts = self.selectedFonts, backgrounds = self.selectedBackgrounds
         
         let startDate = Date()
         let charset = "ABCDEFGHJKLMNPRSTUVWXYZ0123456789"
         
-        self.worker = TrainingWorker(fonts: fonts, backgrounds: backgrounds, charset: charset,
-                                     expectedTextLength: TrainingParameters.ExpectedTextLength)
+        self.worker = TrainingWorker(fonts: fonts, backgrounds: backgrounds, charset: charset, maxTextLength: TrainingParameters.MaxTrainingTextLength)
         
-        self.worker!.progress = { [weak self] (error) in
+        self.worker!.progress = { [weak self] (accuracy) in
             guard let strongSelf = self else {
                 return
             }
             
-            let maxError: Float = 70
-            let progress: Float
-            
-            if error > maxError {
-                progress = 0
-            } else if error < TrainingParameters.ErrorThreshold {
-                progress = 1
-            } else {
-                progress = 1 - ((error - TrainingParameters.ErrorThreshold) / maxError)
-            }
-            
             DispatchQueue.main.async {
-                let maxValue = strongSelf.progressCircle.maxValue
-                strongSelf.progressCircle.doubleValue = min(Double(progress) * maxValue, maxValue)
-                strongSelf.progressLabel.stringValue = String(format: "%.02f / %.02f", error, TrainingParameters.ErrorThreshold)
+                strongSelf.accuracyLabel.stringValue = String(format: "%.04f%%", accuracy * 100)
             }
         }
         
